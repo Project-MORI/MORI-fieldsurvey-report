@@ -1,5 +1,4 @@
-cat > mkdocs.yml <<'EOF'
-site_name: MORI Field Survey Report
+site_name: "MORI Field Survey Report"
 docs_dir: "."
 
 theme:
@@ -11,4 +10,3 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true
-EOF

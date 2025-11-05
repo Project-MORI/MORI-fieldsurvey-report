@@ -1,0 +1,14 @@
+cat > mkdocs.yml <<'EOF'
+site_name: MORI Field Survey Report
+docs_dir: "."
+
+theme:
+  name: material
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+EOF

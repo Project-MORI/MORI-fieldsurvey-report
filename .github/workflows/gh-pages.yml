@@ -14,10 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ★ Python は 3.11 に固定（プラグイン互換性のため）
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Install deps
         run: |
@@ -29,8 +30,6 @@ jobs:
       - name: Debug repo state
         run: |
           set -euxo pipefail
-          echo "== pwd =="; pwd
-          echo "== ls -la (root) =="; ls -la
           echo "== mkdocs.yml =="; sed -n '1,200p' mkdocs.yml || true
           echo "== docs tree =="; find docs -maxdepth 3 -type f -print || true
 
@@ -38,12 +37,10 @@ jobs:
         run: |
           set -euxo pipefail
           mkdocs --version
-          # ログを保存し、失敗時は直後にダンプして終了コードを返す
-          mkdocs build --strict -v 2>&1 | tee build.log || { 
-            echo "===== mkdocs build failed. Dumping build.log =====";
-            tail -n +1 build.log;
-            echo "===== END build.log =====";
-            exit 1;
+          mkdocs build --strict -v 2>&1 | tee build.log || {
+            echo "===== mkdocs build failed. Dumping build.log ====="
+            cat build.log
+            exit 1
           }
 
       - name: Deploy

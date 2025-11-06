@@ -9,8 +9,8 @@ theme:
 
 plugins:
   - search
-  - roamlinks      # [[内部リンク]] を自動解決
-  - glightbox      # 画像クリックで拡大
+  - roamlinks
+  - glightbox
 
 markdown_extensions:
   - toc:

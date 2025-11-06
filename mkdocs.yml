@@ -1,5 +1,5 @@
 site_name: "MORI Field Survey Report"
-docs_dir: "."
+# docs_dir は既定値（docs）を使う → 設定しない
 
 theme:
   name: material

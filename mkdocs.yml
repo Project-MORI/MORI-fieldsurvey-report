@@ -9,8 +9,8 @@ theme:
 
 plugins:
   - search
-  - roamlinks
-  - glightbox
+  - roamlinks      # Obsidianの [[link]] を自動解決
+  - glightbox      # 画像クリックで拡大
 
 markdown_extensions:
   - toc:

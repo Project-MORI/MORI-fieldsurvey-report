@@ -1,14 +1,20 @@
 site_name: "MORI Field Survey Report"
+site_url: "https://project-mori.github.io/MORI-fieldsurvey-report/"
 
 theme:
   name: material
+  features:
+    - navigation.top
+    - content.code.copy
 
 plugins:
   - search
-  - roamlinks   # ★ここを追加
-  - glightbox
-
+  - roamlinks        # ← Obsidian の [[内部リンク]] を自動変換
+  - glightbox        # ← 画像をクリックで拡大
 
 markdown_extensions:
   - toc:
       permalink: true
+  - admonition
+  - attr_list
+  - def_list

@@ -11,9 +11,11 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -21,9 +23,7 @@ jobs:
         run: |
           python -V
           pip install --upgrade pip
-          pip install mkdocs-material
-          pip install mkdocs-roamlinks-plugin
-          pip install mkdocs-glightbox
+          pip install mkdocs-material mkdocs-roamlinks-plugin mkdocs-glightbox
 
       - name: Build (strict & verbose)
         run: |

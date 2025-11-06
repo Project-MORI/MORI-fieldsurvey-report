@@ -22,6 +22,8 @@ jobs:
           python -V
           pip install --upgrade pip
           pip install mkdocs-material
+          pip install mkdocs-roamlinks-plugin
+          pip install mkdocs-glightbox
 
       - name: Build (strict & verbose)
         run: |

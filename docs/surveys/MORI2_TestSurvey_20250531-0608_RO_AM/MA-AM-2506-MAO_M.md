@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | MA-AM-2506-MAO_M |
-| survey name | S02W060 |
+| survey name | MORI2_TestSurvey_20250531-0608_RO_AM |
 | Mesh | S02W060 |
 | State |  |
 | Lat, Lon | -59.3277285103532, -2.80408484833432 |

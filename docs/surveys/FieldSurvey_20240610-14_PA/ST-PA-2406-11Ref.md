@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | ST-PA-2406-11Ref |
-| survey name | S02W055 |
+| survey name | FieldSurvey_20240610-14_PA |
 | Mesh | S02W055 |
 | State |  |
 | Lat, Lon | -54.8533301034942, -2.90952908620879 |

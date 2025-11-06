@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | {{id}} |
-| survey name | {{mesh}} |
+| survey name | {{name}} |
 | Mesh | {{mesh}} |
 | State | {{state}} |
 | Lat, Lon | {{lat}}, {{lon}} |

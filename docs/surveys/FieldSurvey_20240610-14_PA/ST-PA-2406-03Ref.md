@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | ST-PA-2406-03Ref |
-| survey name | S03W054 |
+| survey name | FieldSurvey_20240610-14_PA |
 | Mesh | S03W054 |
 | State |  |
 | Lat, Lon | -53.8910314090662, -3.08400379342299 |

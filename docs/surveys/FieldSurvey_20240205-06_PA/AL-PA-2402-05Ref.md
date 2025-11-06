@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | AL-PA-2402-05Ref |
-| survey name | S02W052 |
+| survey name | FieldSurvey_20240205-06_PA |
 | Mesh | S02W052 |
 | State |  |
 | Lat, Lon | -51.9102943053289, -2.63770054410608 |

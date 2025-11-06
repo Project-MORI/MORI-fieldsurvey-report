@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | PO-RO-2506-PO_G2 |
-| survey name | S08W065 |
+| survey name | MORI2_TestSurvey_20250531-0608_RO_AM |
 | Mesh | S08W065 |
 | State |  |
 | Lat, Lon | -64.3944770136586, -8.9560001844839 |

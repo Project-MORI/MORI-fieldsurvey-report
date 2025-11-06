@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "0e5212a866cbac51",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "e72abddb84b33196",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          }
-        ]
-      },
-      {
         "id": "c348c61a1e8c362b",
         "type": "tabs",
         "children": [
@@ -31,10 +11,14 @@
             "id": "0e1f90f14520c41b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-05.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ST-PA-2402-05"
             }
           }
         ]
@@ -185,16 +169,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "e72abddb84b33196",
+  "active": "0e1f90f14520c41b",
   "lastOpenFiles": [
+    "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-02.md",
+    "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-03.md",
+    "docs/surveys/FieldSurvey_240205-06_PA/index.md",
+    "docs/index.md",
     "docs/assets/survey_links.json",
     "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-06.md",
     "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-07.md",
-    "docs/surveys/FieldSurvey_240205-06_PA/index.md",
     "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-05.md",
     "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-04.md",
-    "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-03.md",
-    "docs/surveys/FieldSurvey_240205-06_PA/ST-PA-2402-02.md",
     "docs/surveys/FieldSurvey_240205-06_PA",
     "docs/surveys/FieldSurvey_20250309-15_RO_AC/index.md",
     "docs/surveys/FieldSurvey_20250309-15_RO_AC/RB-AC-2503-09.md",
@@ -221,7 +206,6 @@
     "docs/surveys/FieldSurvey_20211018-19_RO",
     "docs/surveys/FieldSurvey_20240610-14_PA",
     "docs/surveys/FieldSurvey_20240318-21_PA",
-    "docs/surveys/FieldSurvey_20240205-06_PA",
-    "docs/surveys/FIeldSurvey_20231008-14_PA"
+    "docs/surveys/FieldSurvey_20240205-06_PA"
   ]
 }

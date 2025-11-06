@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | NP-PA-2410-52Ref |
-| survey name | S06W055 |
+| survey name | FieldSurvey_20241023-27_PA |
 | Mesh | S06W055 |
 | State |  |
 | Lat, Lon | -54.9819852447906, -6.37255530352624 |

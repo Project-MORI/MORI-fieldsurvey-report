@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | EX-RO-2506-EX_B |
-| survey name | S09W067 |
+| survey name | MORI2_TestSurvey_20250531-0608_RO_AM |
 | Mesh | S09W067 |
 | State |  |
 | Lat, Lon | -66.2994121377459, -9.57738952359929 |

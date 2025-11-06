@@ -18,7 +18,7 @@ Obs:
 | Title | Content |
 |------|------|
 | ID | HU-AM-2410-05Ref |
-| survey name | S07W064 |
+| survey name | FieldSurvey_20241007-11_RO_AM |
 | Mesh | S07W064 |
 | State |  |
 | Lat, Lon | -63.3199130307697, -7.57531284717581 |

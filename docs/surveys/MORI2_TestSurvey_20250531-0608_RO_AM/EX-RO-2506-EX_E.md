@@ -20,9 +20,8 @@ Obs:
 | ID | EX-RO-2506-EX_E |
 | survey name | S09W066 |
 | Mesh | S09W066 |
-| State | {{州}} |
-| Lat | -65.5788219169475 |
-| Lon | -9.73728506694887 |
+| State |  |
+| Lat, Lon | -65.5788219169475, -9.73728506694887 |
 | Survey Date | 2025/06/03 |
 | JJ-FAST Date |  |
 | Deter Date |  |

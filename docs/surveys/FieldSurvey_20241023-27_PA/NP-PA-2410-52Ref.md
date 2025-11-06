@@ -20,9 +20,8 @@ Obs:
 | ID | NP-PA-2410-52Ref |
 | survey name | S06W055 |
 | Mesh | S06W055 |
-| State | {{州}} |
-| Lat | -54.9819852447906 |
-| Lon | -6.37255530352624 |
+| State |  |
+| Lat, Lon | -54.9819852447906, -6.37255530352624 |
 | Survey Date | 2024/10/25 |
 | JJ-FAST Date |  |
 | Deter Date |  |

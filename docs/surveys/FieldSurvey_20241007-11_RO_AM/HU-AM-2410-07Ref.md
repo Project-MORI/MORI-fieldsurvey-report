@@ -20,9 +20,8 @@ Obs:
 | ID | HU-AM-2410-07Ref |
 | survey name | S07W064 |
 | Mesh | S07W064 |
-| State | {{州}} |
-| Lat | -63.336397468398 |
-| Lon | -7.5805906610167 |
+| State |  |
+| Lat, Lon | -63.336397468398, -7.5805906610167 |
 | Survey Date | 2024/10/07 |
 | JJ-FAST Date |  |
 | Deter Date |  |

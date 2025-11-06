@@ -20,9 +20,8 @@ Obs:
 | ID | ST-PA-2406-11Ref |
 | survey name | S02W055 |
 | Mesh | S02W055 |
-| State | {{州}} |
-| Lat | -54.8533301034942 |
-| Lon | -2.90952908620879 |
+| State |  |
+| Lat, Lon | -54.8533301034942, -2.90952908620879 |
 | Survey Date | 2024/02/06 |
 | JJ-FAST Date |  |
 | Deter Date |  |

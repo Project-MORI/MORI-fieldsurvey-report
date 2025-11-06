@@ -20,9 +20,8 @@ Obs:
 | ID | AL-PA-2403-16Ref |
 | survey name | S03W053 |
 | Mesh | S03W053 |
-| State | {{州}} |
-| Lat | -52.4035570757231 |
-| Lon | -3.31362662838908 |
+| State |  |
+| Lat, Lon | -52.4035570757231, -3.31362662838908 |
 | Survey Date | 2024/03/20 |
 | JJ-FAST Date |  |
 | Deter Date |  |

@@ -20,9 +20,8 @@ Obs:
 | ID | AL-PA-2406-04Ref |
 | survey name | S02W052 |
 | Mesh | S02W052 |
-| State | {{州}} |
-| Lat | -51.6632338106152 |
-| Lon | -2.99885174898919 |
+| State |  |
+| Lat, Lon | -51.6632338106152, -2.99885174898919 |
 | Survey Date | 2024/06/11 |
 | JJ-FAST Date |  |
 | Deter Date |  |

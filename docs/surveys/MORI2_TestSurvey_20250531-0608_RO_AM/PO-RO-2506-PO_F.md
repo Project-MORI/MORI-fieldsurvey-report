@@ -20,9 +20,8 @@ Obs:
 | ID | PO-RO-2506-PO_F |
 | survey name | S08W065 |
 | Mesh | S08W065 |
-| State | {{州}} |
-| Lat | -64.2741414587701 |
-| Lon | -8.97345330980336 |
+| State |  |
+| Lat, Lon | -64.2741414587701, -8.97345330980336 |
 | Survey Date | 2025/06/04 |
 | JJ-FAST Date |  |
 | Deter Date |  |

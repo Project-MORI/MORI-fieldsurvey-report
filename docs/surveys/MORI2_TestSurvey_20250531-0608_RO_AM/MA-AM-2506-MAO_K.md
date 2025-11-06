@@ -20,9 +20,8 @@ Obs:
 | ID | MA-AM-2506-MAO_K |
 | survey name | S02W060 |
 | Mesh | S02W060 |
-| State | {{州}} |
-| Lat | -59.32834734477 |
-| Lon | -2.82307139350602 |
+| State |  |
+| Lat, Lon | -59.32834734477, -2.82307139350602 |
 | Survey Date | 2025/06/07 |
 | JJ-FAST Date |  |
 | Deter Date |  |

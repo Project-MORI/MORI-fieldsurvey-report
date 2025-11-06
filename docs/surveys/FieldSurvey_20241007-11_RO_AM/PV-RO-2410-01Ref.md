@@ -20,9 +20,8 @@ Obs:
 | ID | PV-RO-2410-01Ref |
 | survey name | S08W064 |
 | Mesh | S08W064 |
-| State | {{州}} |
-| Lat | -63.2881105759739 |
-| Lon | -8.55980581245835 |
+| State |  |
+| Lat, Lon | -63.2881105759739, -8.55980581245835 |
 | Survey Date | 2024/10/11 |
 | JJ-FAST Date |  |
 | Deter Date |  |

@@ -20,9 +20,8 @@ Obs:
 | ID | ST-PA-2406-04Ref |
 | survey name | S03W054 |
 | Mesh | S03W054 |
-| State | {{州}} |
-| Lat | -53.9009438151023 |
-| Lon | -3.10225213556858 |
+| State |  |
+| Lat, Lon | -53.9009438151023, -3.10225213556858 |
 | Survey Date | 2024/02/06 |
 | JJ-FAST Date |  |
 | Deter Date |  |

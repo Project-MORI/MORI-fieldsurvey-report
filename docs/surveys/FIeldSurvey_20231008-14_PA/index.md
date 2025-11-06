@@ -13,20 +13,20 @@ title: FIeldSurvey_20231008-14_PA
 ## Suevey is list
 | 調査ID | Mesh | 備考 |
 |--------|------|------|
-| [AL-PA-2310-03](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-03) |  |  |
-| [AL-PA-2310-05](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-05) |  |  |
-| [AL-PA-2310-06](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-06) |  |  |
-| [AL-PA-2310-07](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-07) |  |  |
-| [AL-PA-2310-10](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-10) |  |  |
-| [AL-PA-2310-11](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-11) |  |  |
-| [AL-PA-2310-13](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-13) |  |  |
-| [AL-PA-2310-18](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-18) |  |  |
-| [AL-PA-2310-19](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-19) |  |  |
-| [AL-PA-2310-23](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-23) |  |  |
-| [AL-PA-2310-24](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-24) |  |  |
-| [AL-PA-2310-30](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-30) |  |  |
-| [AL-PA-2310-35](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-35) |  |  |
-| [AL-PA-2310-40](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-40) |  |  |
-| [AL-PA-2310-42](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-42) |  |  |
-| [AL-PA-2310-49](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-49) |  |  |
-| [AL-PA-2310-50](/surveys/FIeldSurvey_20231008-14_PA/AL-PA-2310-50) |  |  |
+| [AL-PA-2310-03](./AL-PA-2310-03) |  |  |
+| [AL-PA-2310-05](./AL-PA-2310-05) |  |  |
+| [AL-PA-2310-06](./AL-PA-2310-06) |  |  |
+| [AL-PA-2310-07](./AL-PA-2310-07) |  |  |
+| [AL-PA-2310-10](./AL-PA-2310-10) |  |  |
+| [AL-PA-2310-11](./AL-PA-2310-11) |  |  |
+| [AL-PA-2310-13](./AL-PA-2310-13) |  |  |
+| [AL-PA-2310-18](./AL-PA-2310-18) |  |  |
+| [AL-PA-2310-19](./AL-PA-2310-19) |  |  |
+| [AL-PA-2310-23](./AL-PA-2310-23) |  |  |
+| [AL-PA-2310-24](./AL-PA-2310-24) |  |  |
+| [AL-PA-2310-30](./AL-PA-2310-30) |  |  |
+| [AL-PA-2310-35](./AL-PA-2310-35) |  |  |
+| [AL-PA-2310-40](./AL-PA-2310-40) |  |  |
+| [AL-PA-2310-42](./AL-PA-2310-42) |  |  |
+| [AL-PA-2310-49](./AL-PA-2310-49) |  |  |
+| [AL-PA-2310-50](./AL-PA-2310-50) |  |  |

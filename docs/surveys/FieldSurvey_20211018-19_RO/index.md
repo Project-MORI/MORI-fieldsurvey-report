@@ -13,7 +13,7 @@ title: FieldSurvey_20211018-19_RO
 ## Suevey is list
 | 調査ID | Mesh | 備考 |
 |--------|------|------|
-| [PV-RO-2110-01](/surveys/FieldSurvey_20211018-19_RO/PV-RO-2110-01) |  |  |
-| [PV-RO-2110-02](/surveys/FieldSurvey_20211018-19_RO/PV-RO-2110-02) |  |  |
-| [PV-RO-2110-03](/surveys/FieldSurvey_20211018-19_RO/PV-RO-2110-03) |  |  |
-| [PV-RO-2110-04](/surveys/FieldSurvey_20211018-19_RO/PV-RO-2110-04) |  |  |
+| [PV-RO-2110-01](./PV-RO-2110-01) |  |  |
+| [PV-RO-2110-02](./PV-RO-2110-02) |  |  |
+| [PV-RO-2110-03](./PV-RO-2110-03) |  |  |
+| [PV-RO-2110-04](./PV-RO-2110-04) |  |  |

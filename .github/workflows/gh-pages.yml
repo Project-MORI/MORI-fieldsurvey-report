@@ -25,6 +25,53 @@ jobs:
           pip install --upgrade pip
           pip install mkdocs-material mkdocs-roamlinks-plugin mkdocs-glightbox
 
+      - name: Debug repo state
+        run: |
+          echo "== ls -la (root) =="; ls -la
+          echo "== mkdocs.yml =="; sed -n '1,200p' mkdocs.yml
+          echo "== docs tree =="; find docs -maxdepth 2 -type f -print || true
+
+      - name: Build (strict & verbose)
+        run: |
+          mkdocs --version
+          mkdocs build --strict -v
+
+      - name: Deploy
+        run: |
+          mkdocs gh-deploy --force -v
+name: deploy
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install deps
+        run: |
+          python -V
+          pip install --upgrade pip
+          pip install mkdocs-material mkdocs-roamlinks-plugin mkdocs-glightbox
+
+      - name: Debug repo state
+        run: |
+          echo "== ls -la (root) =="; ls -la
+          echo "== mkdocs.yml =="; sed -n '1,200p' mkdocs.yml
+          echo "== docs tree =="; find docs -maxdepth 2 -type f -print || true
+
       - name: Build (strict & verbose)
         run: |
           mkdocs --version

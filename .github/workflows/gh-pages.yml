@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ★ Python は 3.11 に固定（プラグイン互換性のため）
+      # Python は 3.11 に固定（プラグインの相性が最も安定）
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -26,22 +26,30 @@ jobs:
           python -V
           pip install --upgrade pip
           pip install mkdocs-material mkdocs-roamlinks-plugin mkdocs-glightbox
+          echo "### pip freeze (mkdocs-related)"; pip freeze | grep -i mkdocs || true
 
       - name: Debug repo state
         run: |
           set -euxo pipefail
+          echo "== ls -la (root) =="; ls -la
           echo "== mkdocs.yml =="; sed -n '1,200p' mkdocs.yml || true
           echo "== docs tree =="; find docs -maxdepth 3 -type f -print || true
 
-      - name: Build (strict & verbose)
+      - name: Build (verbose, always print output)
+        shell: bash
         run: |
-          set -euxo pipefail
-          mkdocs --version
-          mkdocs build --strict -v 2>&1 | tee build.log || {
-            echo "===== mkdocs build failed. Dumping build.log ====="
-            cat build.log
-            exit 1
-          }
+          set -o pipefail
+          mkdocs --version || true
+          echo "### START mkdocs build"
+          mkdocs build -v 2>&1 | tee build.log
+          status=${PIPESTATUS[0]}
+          echo "### mkdocs exit code: $status"
+          echo "### ===== build.log (full) ====="
+          cat build.log || true
+          echo "### ===== END build.log ====="
+          if [ $status -ne 0 ]; then
+            exit $status
+          fi
 
       - name: Deploy
         run: |

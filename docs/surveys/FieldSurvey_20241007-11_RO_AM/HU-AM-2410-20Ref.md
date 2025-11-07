@@ -5,7 +5,7 @@ Mesh:
 State: 
 Lat:
 Lon: 
-Survey Date: 2024/10/08
+Survey Date: 2024/10/8
 JJ_FAST Date: 
 Deter Date: 
 NASA FIRMS Date: 
@@ -21,8 +21,8 @@ Obs:
 | survey name | FieldSurvey_20241007-11_RO_AM |
 | Mesh | S07W064 |
 | State |  |
-| Lat, Lon | -63.0662877539664, -7.08228066705847 |
-| Survey Date | 2024/10/08 |
+| Lat, Lon | -63.06628775, -7.082280667 |
+| Survey Date | 2024/10/8 |
 | JJ-FAST Date |  |
 | Deter Date |  |
 | NASA FIRMS Date |  |

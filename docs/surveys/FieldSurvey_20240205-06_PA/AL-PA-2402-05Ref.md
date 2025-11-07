@@ -5,7 +5,7 @@ Mesh:
 State: 
 Lat:
 Lon: 
-Survey Date: 2024/02/05
+Survey Date: 2024/2/5
 JJ_FAST Date: 
 Deter Date: 
 NASA FIRMS Date: 
@@ -21,8 +21,8 @@ Obs:
 | survey name | FieldSurvey_20240205-06_PA |
 | Mesh | S02W052 |
 | State |  |
-| Lat, Lon | -51.9102943053289, -2.63770054410608 |
-| Survey Date | 2024/02/05 |
+| Lat, Lon | -51.91029431, -2.637700544 |
+| Survey Date | 2024/2/5 |
 | JJ-FAST Date |  |
 | Deter Date |  |
 | NASA FIRMS Date |  |

@@ -5,7 +5,7 @@ Mesh:
 State: 
 Lat:
 Lon: 
-Survey Date: 2025/06/04
+Survey Date: 2025/6/4
 JJ_FAST Date: 
 Deter Date: 
 NASA FIRMS Date: 
@@ -21,8 +21,8 @@ Obs:
 | survey name | MORI2_TestSurvey_20250531-0608_RO_AM |
 | Mesh | S08W065 |
 | State |  |
-| Lat, Lon | -64.3946165124912, -8.94681023711205 |
-| Survey Date | 2025/06/04 |
+| Lat, Lon | -64.39461651, -8.946810237 |
+| Survey Date | 2025/6/4 |
 | JJ-FAST Date |  |
 | Deter Date |  |
 | NASA FIRMS Date |  |

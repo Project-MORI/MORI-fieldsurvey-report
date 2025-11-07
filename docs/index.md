@@ -23,7 +23,6 @@ EOF
   <li><a href="surveys/FieldSurvey_20241023-27_PA/">FieldSurvey_20241023-27_PA</a></li>
   <li><a href="surveys/FieldSurvey_20250309-15_RO_AC/">FieldSurvey_20250309-15_RO_AC</a></li>
   <li><a href="surveys/FieldSurvey_20251006-16_PA/">FieldSurvey_20251006-16_PA</a></li>
-  <li><a href="surveys/FieldSurvey_240205-06_PA/">FieldSurvey_240205-06_PA</a></li>
   <li><a href="surveys/MORI2_TestSurvey_20250531-0608_RO_AM/">MORI2_TestSurvey_20250531-0608_RO_AM</a></li>
 </ul>
 <!-- END: AUTO_SURVEY_LIST -->

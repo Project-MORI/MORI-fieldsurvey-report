@@ -21,7 +21,7 @@ Obs:
 | survey name | FieldSurvey_20241023-27_PA |
 | Mesh | S06W055 |
 | State |  |
-| Lat, Lon | -54.9819852447906, -6.37255530352624 |
+| Lat, Lon | -54.98198524, -6.372555304 |
 | Survey Date | 2024/10/25 |
 | JJ-FAST Date |  |
 | Deter Date |  |

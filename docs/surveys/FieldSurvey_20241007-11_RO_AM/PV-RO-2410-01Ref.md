@@ -21,7 +21,7 @@ Obs:
 | survey name | FieldSurvey_20241007-11_RO_AM |
 | Mesh | S08W064 |
 | State |  |
-| Lat, Lon | -63.2881105759739, -8.55980581245835 |
+| Lat, Lon | -63.28811058, -8.559805812 |
 | Survey Date | 2024/10/11 |
 | JJ-FAST Date |  |
 | Deter Date |  |

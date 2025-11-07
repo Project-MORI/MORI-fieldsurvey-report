@@ -12,8 +12,7 @@
     "FieldSurvey_20220919-23_RO": "surveys/FieldSurvey_20220919-23_RO/",
     "FieldSurvey_20241007-11_RO_AM": "surveys/FieldSurvey_20241007-11_RO_AM/",
     "FieldSurvey_20241023-27_PA": "surveys/FieldSurvey_20241023-27_PA/",
-    "FieldSurvey_20250309-15_RO_AC": "surveys/FieldSurvey_20250309-15_RO_AC/",
-    "FieldSurvey_240205-06_PA": "surveys/FieldSurvey_240205-06_PA/"
+    "FieldSurvey_20250309-15_RO_AC": "surveys/FieldSurvey_20250309-15_RO_AC/"
   },
   "id_to_url": {
     "EX-RO-2506-SAF_A": "surveys/MORI2_TestSurvey_20250531-0608_RO_AM/EX-RO-2506-SAF_A",
@@ -201,12 +200,12 @@
     "EX-RO-2503-01": "surveys/FieldSurvey_20250309-15_RO_AC/EX-RO-2503-01",
     "RB-AC-2503-04": "surveys/FieldSurvey_20250309-15_RO_AC/RB-AC-2503-04",
     "ST-PA-2402-01": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-01",
-    "ST-PA-2402-02": "surveys/FieldSurvey_240205-06_PA/ST-PA-2402-02",
-    "ST-PA-2402-03": "surveys/FieldSurvey_240205-06_PA/ST-PA-2402-03",
-    "ST-PA-2402-04": "surveys/FieldSurvey_240205-06_PA/ST-PA-2402-04",
-    "ST-PA-2402-05": "surveys/FieldSurvey_240205-06_PA/ST-PA-2402-05",
-    "ST-PA-2402-06": "surveys/FieldSurvey_240205-06_PA/ST-PA-2402-06",
-    "ST-PA-2402-07": "surveys/FieldSurvey_240205-06_PA/ST-PA-2402-07",
+    "ST-PA-2402-02": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-02",
+    "ST-PA-2402-03": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-03",
+    "ST-PA-2402-04": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-04",
+    "ST-PA-2402-05": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-05",
+    "ST-PA-2402-06": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-06",
+    "ST-PA-2402-07": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-07",
     "ST-PA-2402-08": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-08",
     "ST-PA-2402-09": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-09",
     "ST-PA-2402-10": "surveys/FieldSurvey_20240205-06_PA/ST-PA-2402-10",

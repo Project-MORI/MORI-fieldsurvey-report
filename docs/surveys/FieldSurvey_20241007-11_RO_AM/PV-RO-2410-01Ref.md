@@ -1,10 +1,10 @@
 ---
 id: PV-RO-2410-01Ref
 Survey Name: FieldSurvey_20241007-11_RO_AM
-Mesh: 
+Mesh: S08W064
 State: 
-Lat:
-Lon: 
+Lat: -63.28811058
+Lon: -8.559805812 
 Survey Date: 2024/10/11
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |
+| Embargo |  |
 | Obs |  |
 
 ---

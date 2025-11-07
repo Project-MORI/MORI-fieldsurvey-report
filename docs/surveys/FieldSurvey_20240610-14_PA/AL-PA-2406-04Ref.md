@@ -1,10 +1,10 @@
 ---
 id: AL-PA-2406-04Ref
 Survey Name: FieldSurvey_20240610-14_PA
-Mesh: 
+Mesh: S02W052
 State: 
-Lat:
-Lon: 
+Lat: -51.66323381
+Lon: -2.998851749 
 Survey Date: 2024/6/11
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |
+| Embargo |  |
 | Obs |  |
 
 ---

@@ -5,10 +5,10 @@ title: {{name}}
 # {{name}}
 
 - **Survey Date**: {{s_date}}
-- **Membert**: {{members}}
+- **Member**: {{members}}
 - **Map**: {{route}}
 
 ---
 
-## Suevey is list
+## Suevey id list
 {{id_table}}

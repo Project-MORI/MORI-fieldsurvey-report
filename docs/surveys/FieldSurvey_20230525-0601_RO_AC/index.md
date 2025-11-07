@@ -5,13 +5,13 @@ title: FieldSurvey_20230525-0601_RO_AC
 # FieldSurvey_20230525-0601_RO_AC
 
 - **Survey Date**: 
-- **Membert**: 
+- **Member**: 
 - **Map**: 
 
 ---
 
-## Suevey is list
-| 調査ID | Mesh | 備考 |
+## Suevey id list
+| ID | Mesh | Obs. |
 |--------|------|------|
 | [AB-RO-2305-01a](./AB-RO-2305-01a) |  |  |
 | [AB-RO-2305-01b](./AB-RO-2305-01b) |  |  |

@@ -5,13 +5,13 @@ title: FIeldSurvey_20231008-14_PA
 # FIeldSurvey_20231008-14_PA
 
 - **Survey Date**: 
-- **Membert**: 
+- **Member**: 
 - **Map**: 
 
 ---
 
-## Suevey is list
-| 調査ID | Mesh | 備考 |
+## Suevey id list
+| ID | Mesh | Obs. |
 |--------|------|------|
 | [AL-PA-2310-03](./AL-PA-2310-03) |  |  |
 | [AL-PA-2310-05](./AL-PA-2310-05) |  |  |

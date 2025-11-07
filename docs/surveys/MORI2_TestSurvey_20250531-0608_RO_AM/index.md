@@ -5,13 +5,13 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
 # MORI2_TestSurvey_20250531-0608_RO_AM
 
 - **Survey Date**: 
-- **Membert**: 
+- **Member**: 
 - **Map**: 
 
 ---
 
-## Suevey is list
-| 調査ID | Mesh | 備考 |
+## Suevey id list
+| ID | Mesh | Obs. |
 |--------|------|------|
 | [EX-RO-2506-EX_A](./EX-RO-2506-EX_A) |  |  |
 | [EX-RO-2506-EX_B](./EX-RO-2506-EX_B) |  |  |

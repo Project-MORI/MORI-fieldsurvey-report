@@ -5,13 +5,13 @@ title: FieldSurvey_20241023-27_PA
 # FieldSurvey_20241023-27_PA
 
 - **Survey Date**: 
-- **Membert**: 
+- **Member**: 
 - **Map**: 
 
 ---
 
-## Suevey is list
-| 調査ID | Mesh | 備考 |
+## Suevey id list
+| ID | Mesh | Obs. |
 |--------|------|------|
 | [NP-PA-2410-01](./NP-PA-2410-01) |  |  |
 | [NP-PA-2410-03](./NP-PA-2410-03) |  |  |

@@ -1,10 +1,10 @@
 ---
 id: NP-PA-2410-52Ref
 Survey Name: FieldSurvey_20241023-27_PA
-Mesh: 
+Mesh: S06W055
 State: 
-Lat:
-Lon: 
+Lat: -54.98198524
+Lon: -6.372555304 
 Survey Date: 2024/10/25
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |
+| Embargo |  |
 | Obs |  |
 
 ---

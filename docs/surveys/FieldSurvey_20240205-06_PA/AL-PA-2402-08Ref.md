@@ -1,10 +1,10 @@
 ---
 id: AL-PA-2402-08Ref
 Survey Name: FieldSurvey_20240205-06_PA
-Mesh: 
+Mesh: S02W052
 State: 
-Lat:
-Lon: 
+Lat: -51.90641282
+Lon: -2.669076327 
 Survey Date: 2024/2/5
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |
+| Embargo |  |
 | Obs |  |
 
 ---

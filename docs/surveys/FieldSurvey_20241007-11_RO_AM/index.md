@@ -5,13 +5,13 @@ title: FieldSurvey_20241007-11_RO_AM
 # FieldSurvey_20241007-11_RO_AM
 
 - **Survey Date**: 
-- **Membert**: 
+- **Member**: 
 - **Map**: 
 
 ---
 
-## Suevey is list
-| 調査ID | Mesh | 備考 |
+## Suevey id list
+| ID | Mesh | Obs. |
 |--------|------|------|
 | [HU-AM-2410-05Ref](./HU-AM-2410-05Ref) |  |  |
 | [HU-AM-2410-06](./HU-AM-2410-06) |  |  |

@@ -5,13 +5,13 @@ title: FieldSurvey_20240205-06_PA
 # FieldSurvey_20240205-06_PA
 
 - **Survey Date**: 
-- **Membert**: 
+- **Member**: 
 - **Map**: 
 
 ---
 
-## Suevey is list
-| 調査ID | Mesh | 備考 |
+## Suevey id list
+| ID | Mesh | Obs. |
 |--------|------|------|
 | [AL-PA-2402-01](./AL-PA-2402-01) |  |  |
 | [AL-PA-2402-02](./AL-PA-2402-02) |  |  |

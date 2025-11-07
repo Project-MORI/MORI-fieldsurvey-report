@@ -1,10 +1,10 @@
 ---
 id: ST-PA-2406-11Ref
 Survey Name: FieldSurvey_20240610-14_PA
-Mesh: 
+Mesh: S02W055
 State: 
-Lat:
-Lon: 
+Lat: -54.8533301
+Lon: -2.909529086 
 Survey Date: 2024/2/6
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |
+| Embargo |  |
 | Obs |  |
 
 ---

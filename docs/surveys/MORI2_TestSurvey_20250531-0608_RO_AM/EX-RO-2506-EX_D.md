@@ -1,10 +1,10 @@
 ---
 id: EX-RO-2506-EX_D
 Survey Name: MORI2_TestSurvey_20250531-0608_RO_AM
-Mesh: 
+Mesh: S09W067
 State: 
-Lat:
-Lon: 
+Lat: -66.33870993
+Lon: -9.579897451 
 Survey Date: 2025/6/3
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |
+| Embargo |  |
 | Obs |  |
 
 ---

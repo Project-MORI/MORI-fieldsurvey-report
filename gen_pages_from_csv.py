@@ -107,7 +107,7 @@ def rel_link_from_name_to_id(id_: str) -> str:
 def build_name_table(name: str, ids: list):
     """調査名ページの「調査ID一覧」テーブル（IDへの相対リンクを使用）。"""
     lines = [
-        "| 調査ID | Mesh | 備考 |",
+        "| ID | Mesh | Obs. |",
         "|--------|------|------|",
     ]
     for id_ in ids:

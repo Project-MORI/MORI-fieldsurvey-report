@@ -1,10 +1,10 @@
 ---
 id: PO-RO-2506-PO_G2
 Survey Name: MORI2_TestSurvey_20250531-0608_RO_AM
-Mesh: 
+Mesh: S08W065
 State: 
-Lat:
-Lon: 
+Lat: -64.39447701
+Lon: -8.956000184 
 Survey Date: 2025/6/4
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |
+| Embargo |  |
 | Obs |  |
 
 ---

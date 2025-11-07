@@ -1,10 +1,10 @@
 ---
 id: {{id}}
 Survey Name: {{name}}
-Mesh: 
-State: 
-Lat:
-Lon: 
+Mesh: {{mesh}}
+State: {{state}}
+Lat: {{lat}}
+Lon: {{lon}} 
 Survey Date: {{date}}
 JJ_FAST Date: 
 Deter Date: 
@@ -27,6 +27,7 @@ Obs:
 | Deter Date | {{Deter}} |
 | NASA FIRMS Date | {{NASA_FIRMS}} |
 | Prodes Year | {{Prodes}} |
+| Embargo | {{emb}} |
 | Obs | {{obs}} |
 
 ---

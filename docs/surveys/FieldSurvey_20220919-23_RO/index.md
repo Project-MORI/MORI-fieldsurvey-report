@@ -5,13 +5,13 @@ title: FieldSurvey_20220919-23_RO
 # FieldSurvey_20220919-23_RO
 
 - **Survey Date**: 
-- **Membert**: 
+- **Member**: 
 - **Map**: 
 
 ---
 
-## Suevey is list
-| 調査ID | Mesh | 備考 |
+## Suevey id list
+| ID | Mesh | Obs. |
 |--------|------|------|
 | [PB-RO-2209-27](./PB-RO-2209-27) |  |  |
 | [PV-RO-2209-03](./PV-RO-2209-03) |  |  |

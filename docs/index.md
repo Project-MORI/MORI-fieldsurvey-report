@@ -1,8 +1,26 @@
 # MORI Field Survey Report
 
-## Survey Map
+**MORI Field Survey Report** is an archive designed to integrate and publish the results of **field surveys conducted under Project MORI**, the JICA–IBAMA technical cooperation initiative.
 
-<div id="map"></div>
+This website provides a structured, map-linked collection of field observations to support **forest monitoring and enforcement against illegal deforestation** in the Brazilian Amazon.  
+Each survey entry follows a standardized format, including:
+
+- Survey location (GeoJSON / map integration)
+    
+- Background and objectives
+    
+- Field observations and photographs
+    
+- Satellite imagery and AI-assisted analysis
+    
+- Key findings and insights
+    
+
+The purpose of this archive is to enhance **transparency**, improve **decision-making support for field operations**, and strengthen **information sharing** among government agencies, researchers, and project stakeholders.
+
+We hope that these efforts contribute to a more sustainable future for the Amazon region.
+
+---
 
 ## Survey Map
 

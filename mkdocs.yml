@@ -18,3 +18,11 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+
+extra:
+  social:
+    - icon: material/github
+      link: https://github.com/Project-MORI/MORI-fieldsurvey-report
+
+  copyright: >
+    © 2025 Project MORI (JICA–IBAMA). All rights reserved.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/surveys/FieldSurvey_20250309-15_RO_AC/index.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,6 +171,9 @@
   },
   "active": "0e1f90f14520c41b",
   "lastOpenFiles": [
+    "docs/surveys/FieldSurvey_20250309-15_RO_AC/index.md",
+    "docs/assets/MORI_survey_github.geojson",
+    "README.md",
     "docs/surveys/FieldSurvey_20241023-27_PA/NP-PA-2410-17.md",
     "docs/surveys/FieldSurvey_20241023-27_PA/NP-PA-2410-14.md",
     "docs/surveys/FieldSurvey_20241023-27_PA/NP-PA-2410-12.md",
@@ -195,8 +198,6 @@
     "docs/surveys/MORI2_TestSurvey_20250531-0608_RO_AM/MA-AM-2506-MAO_K.md",
     "docs/surveys/MORI2_TestSurvey_20250531-0608_RO_AM/MA-AM-2506-MAO_J.md",
     "docs/surveys/MORI2_TestSurvey_20250531-0608_RO_AM/MA-AM-2506-MAO_I.md",
-    "docs/surveys/MORI2_TestSurvey_20250531-0608_RO_AM/MA-AM-2506-MAO_H.md",
-    "docs/surveys/FieldSurvey_20251006-16_PA/ST-PA-2510-95.md",
     "docs/surveys/FieldSurvey_20250309-15_RO_AC",
     "docs/surveys/FieldSurvey_20241023-27_PA",
     "docs/surveys/FieldSurvey_20241007-11_RO_AM",
@@ -205,7 +206,6 @@
     "docs/surveys/FieldSurvey_20240610-14_PA",
     "docs/surveys/FieldSurvey_20240318-21_PA",
     "docs/surveys/FieldSurvey_20240205-06_PA",
-    "docs/surveys/FIeldSurvey_20231008-14_PA",
-    "docs/surveys/FieldSurvey_20220214-21_PA"
+    "docs/surveys/FIeldSurvey_20231008-14_PA"
   ]
 }

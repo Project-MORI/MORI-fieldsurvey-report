@@ -4,6 +4,11 @@
 
 <div id="map"></div>
 
+## Survey Map
+
+<div id="map"></div>
+
+<!-- Leaflet & MarkerCluster CSS -->
 <link
   rel="stylesheet"
   href="https://unpkg.com/leaflet/dist/leaflet.css"
@@ -17,11 +22,23 @@
   href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
 />
 
+<style>
+  #map {
+    height: 600px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+</style>
+
+<!-- Leaflet & MarkerCluster JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
 <script>
   // トップページから見た GeoJSON の相対パス
   const geojsonUrl = "./assets/MORI_survey_github.geojson";
 
-  // 適当な初期中心・ズーム（Amazon全体イメージ）
+  // マップ初期化（Amazon全体をざっくり表示）
   const map = L.map("map").setView([-4.5, -62.0], 5);
 
   // 背景地図（OpenStreetMap）
@@ -33,8 +50,14 @@
   // ---- 調査名ごとの色分け用 ----
   const titleColorMap = {};
   const colorPalette = [
-    "#e41a1c", "#377eb8", "#4daf4a", "#984ea3",
-    "#ff7f00", "#a65628", "#f781bf", "#999999"
+    "#e41a1c",
+    "#377eb8",
+    "#4daf4a",
+    "#984ea3",
+    "#ff7f00",
+    "#a65628",
+    "#f781bf",
+    "#999999",
   ];
 
   function getColorForTitle(title) {
@@ -56,7 +79,7 @@
     .then((response) => response.json())
     .then((data) => {
       const geojsonLayer = L.geoJSON(data, {
-        // 各ポイントの見た目（circleMarker + titleごと色分け）
+        // ポイントを title ごとの色付き circleMarker に
         pointToLayer: function (feature, latlng) {
           const props = feature.properties || {};
           const title = props.title || props.name || "";
@@ -72,23 +95,20 @@
           });
         },
 
-        // ポップアップ（IDをリンクにする）
+        // ポップアップ（ID をリンクにする・URL未定のため #）
         onEachFeature: function (feature, layer) {
           const p = feature.properties || {};
           const id = p.survey_id || p.id || "";
           const title = p.title || p.name || "";
-          // まだGeoJSONにURL列がないので、暫定的に "#"
-          const url = p.page_url || "#";
+
+          // まだ GeoJSON に URL 列がないので暫定的に "#"
+          const url = "#";
 
           let html = "";
           if (title) html += "<b>" + title + "</b><br>";
-
           if (id) {
             html += 'ID: <a href="' + url + '">' + id + "</a><br>";
           }
-
-          // 他に表示したい属性があればここに追記
-          // if (p.region) html += "Mesh: " + p.region + "<br>";
 
           if (html) {
             layer.bindPopup(html);
@@ -96,11 +116,11 @@
         },
       });
 
-      // GeoJSONレイヤーをクラスタグループに追加
+      // GeoJSON レイヤーをクラスタに追加してマップへ
       clusterGroup.addLayer(geojsonLayer);
       map.addLayer(clusterGroup);
 
-      // すべての点が入るようにズーム調整
+      // すべての点が入るように自動ズーム
       try {
         map.fitBounds(clusterGroup.getBounds());
       } catch (e) {

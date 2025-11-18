@@ -6,7 +6,8 @@ State:
 Lat: -64.27414146
 Lon: -8.97345331 
 Survey Date: 2025/6/4
-JJ_FAST Date: 
+JJ_FAST v3.2 Date:
+JJ_FAST v4.1 Date:
 Deter Date: 
 NASA FIRMS Date: 
 Prodes year: 
@@ -23,7 +24,8 @@ Obs:
 | State |  |
 | Lat, Lon | -64.27414146, -8.97345331 |
 | Survey Date | 2025/6/4 |
-| JJ-FAST Date |  |
+| JJ-FAST v3.2 Date |  |
+| JJ-FAST v4.1 Date |  |
 | Deter Date |  |
 | NASA FIRMS Date |  |
 | Prodes Year |  |

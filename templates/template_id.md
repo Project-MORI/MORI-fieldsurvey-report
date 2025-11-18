@@ -6,7 +6,8 @@ State: {{state}}
 Lat: {{lat}}
 Lon: {{lon}} 
 Survey Date: {{date}}
-JJ_FAST Date: 
+JJ_FAST v3.2 Date:
+JJ_FAST v4.1 Date:
 Deter Date: 
 NASA FIRMS Date: 
 Prodes year: 
@@ -23,7 +24,8 @@ Obs:
 | State | {{state}} |
 | Lat, Lon | {{lat}}, {{lon}} |
 | Survey Date | {{date}} |
-| JJ-FAST Date | {{JJ_FAST}} |
+| JJ-FAST v3.2 Date | {{JJ_FAST_v3}} |
+| JJ-FAST v4.1 Date | {{JJ_FAST_v4}} |
 | Deter Date | {{Deter}} |
 | NASA FIRMS Date | {{NASA_FIRMS}} |
 | Prodes Year | {{Prodes}} |

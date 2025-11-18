@@ -8,20 +8,21 @@
   rel="stylesheet"
   href="https://unpkg.com/leaflet/dist/leaflet.css"
 />
-<style>
-  #map {
-    height: 600px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-</style>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
+/>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
   // トップページから見た GeoJSON の相対パス
   const geojsonUrl = "./assets/MORI_survey_github.geojson";
 
-  const map = L.map("map").setView([-4.5, -62.0], 5); // 適当な初期中心・ズーム
+  // 適当な初期中心・ズーム（Amazon全体イメージ）
+  const map = L.map("map").setView([-4.5, -62.0], 5);
 
   // 背景地図（OpenStreetMap）
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -29,29 +30,79 @@
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
+  // ---- 調査名ごとの色分け用 ----
+  const titleColorMap = {};
+  const colorPalette = [
+    "#e41a1c", "#377eb8", "#4daf4a", "#984ea3",
+    "#ff7f00", "#a65628", "#f781bf", "#999999"
+  ];
+
+  function getColorForTitle(title) {
+    if (!title) {
+      return "#3388ff"; // デフォルト色
+    }
+    if (!titleColorMap[title]) {
+      const idx = Object.keys(titleColorMap).length % colorPalette.length;
+      titleColorMap[title] = colorPalette[idx];
+    }
+    return titleColorMap[title];
+  }
+
+  // ---- マーカークラスタグループ ----
+  const clusterGroup = L.markerClusterGroup();
+
   // GeoJSON 読み込み
   fetch(geojsonUrl)
     .then((response) => response.json())
     .then((data) => {
-      const layer = L.geoJSON(data, {
+      const geojsonLayer = L.geoJSON(data, {
+        // 各ポイントの見た目（circleMarker + titleごと色分け）
+        pointToLayer: function (feature, latlng) {
+          const props = feature.properties || {};
+          const title = props.title || props.name || "";
+          const color = getColorForTitle(title);
+
+          return L.circleMarker(latlng, {
+            radius: 6,
+            fillColor: color,
+            color: "#000000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.9,
+          });
+        },
+
+        // ポップアップ（IDをリンクにする）
         onEachFeature: function (feature, layer) {
           const p = feature.properties || {};
           const id = p.survey_id || p.id || "";
           const title = p.title || p.name || "";
-          const url = p.page_url || ""; // あればページへのリンクに使う
+          // まだGeoJSONにURL列がないので、暫定的に "#"
+          const url = p.page_url || "#";
 
           let html = "";
           if (title) html += "<b>" + title + "</b><br>";
-          if (id) html += "ID: " + id + "<br>";
-          if (url) html += '<a href="' + url + '">Open survey page</a>';
 
-          if (html) layer.bindPopup(html);
+          if (id) {
+            html += 'ID: <a href="' + url + '">' + id + "</a><br>";
+          }
+
+          // 他に表示したい属性があればここに追記
+          // if (p.region) html += "Mesh: " + p.region + "<br>";
+
+          if (html) {
+            layer.bindPopup(html);
+          }
         },
-      }).addTo(map);
+      });
+
+      // GeoJSONレイヤーをクラスタグループに追加
+      clusterGroup.addLayer(geojsonLayer);
+      map.addLayer(clusterGroup);
 
       // すべての点が入るようにズーム調整
       try {
-        map.fitBounds(layer.getBounds());
+        map.fitBounds(clusterGroup.getBounds());
       } catch (e) {
         console.warn("fitBounds failed:", e);
       }

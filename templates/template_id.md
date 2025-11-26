@@ -4,22 +4,24 @@ Survey Name: {{name}}
 Mesh: {{mesh}}
 State: {{state}}
 Lat: {{lat}}
-Lon: {{lon}} 
+Lon: {{lon}}
 Survey Date: {{date}}
-JJ_FAST v3.2 Date:
-JJ_FAST v4.1 Date:
-Deter Date: 
-NASA FIRMS Date: 
-Prodes year: 
-Obs: 
+JJ_FAST v3.2 Date: {{JJ_FAST_v3}}
+JJ_FAST v4.1 Date: {{JJ_FAST_v4}}
+Deter Date: {{Deter}}
+Type: {{type}}
+NASA FIRMS Date: {{NASA_FIRMS}}
+Prodes Year: {{Prodes}}
+Embargo: {{emb}}
+Obs: {{obs}}
 ---
 
-# {{id}}
+# {{id}} - {{name}}
 
 | Title | Content |
-|------|------|
+|------|---------|
 | ID | {{id}} |
-| survey name | {{name}} |
+| Survey Name | {{name}} |
 | Mesh | {{mesh}} |
 | State | {{state}} |
 | Lat, Lon | {{lat}}, {{lon}} |
@@ -27,6 +29,7 @@ Obs:
 | JJ-FAST v3.2 Date | {{JJ_FAST_v3}} |
 | JJ-FAST v4.1 Date | {{JJ_FAST_v4}} |
 | Deter Date | {{Deter}} |
+| Type | {{type}} |
 | NASA FIRMS Date | {{NASA_FIRMS}} |
 | Prodes Year | {{Prodes}} |
 | Embargo | {{emb}} |
@@ -34,10 +37,21 @@ Obs:
 
 ---
 
+## Survey Results 
+
+---
+
 ## Map & Graph
-（現地写真や地図などをここに配置）
+
+
+{{map_block}}
+
+{{graph_block}}
 
 ---
 
 ## Comments
-（調査時の所感、現場の状況、植生変化など）
+
+- 調査時の所感
+- 現場の状況（伐採形態、森林状態など）
+- 補足情報

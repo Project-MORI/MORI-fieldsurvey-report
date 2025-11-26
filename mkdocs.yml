@@ -58,10 +58,10 @@ markdown_extensions:
   # - tables
 
 nav:
-  - "Home": index.md
-  - "About": about.md
-  - "Surveys": 
+  - Home: index.md
+  - Surveys:
       - surveys/
+  - About: about.md
 
 extra:
   social:

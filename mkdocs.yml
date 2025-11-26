@@ -57,11 +57,11 @@ markdown_extensions:
   - def_list
   # - tables
 
-nav:
-  - Home: index.md
-  - Surveys:
-      - surveys/
-  - About: about.md
+# nav:
+#   - Home: index.md
+#   - Surveys:
+#       - surveys/
+#   - About: about.md
 
 extra:
   social:

@@ -36,7 +36,7 @@ theme:
   language: ja
   features:
     - navigation.top
-    - navigation.footer
+    # - navigation.footer
     - navigation.sections
     - content.code.copy
     - content.tabs.link

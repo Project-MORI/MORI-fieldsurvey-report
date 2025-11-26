@@ -3,40 +3,26 @@ site_url: "https://project-mori.github.io/MORI-fieldsurvey-report/"
 
 theme:
   name: material
-  language: ja
   features:
     - navigation.top
-    - navigation.footer
-    - navigation.sections
     - content.code.copy
-    - content.tabs.link
-    - toc.integrate
 
 plugins:
   - search
-  - roamlinks      # [[内部リンク]]
+  - roamlinks      # [[内部リンク]] を自動変換
   - glightbox      # 画像クリックで拡大
-  - table-reader   # （任意）CSV表をMarkdownに自動挿入したい場合
 
 markdown_extensions:
   - toc:
       permalink: true
   - admonition
   - attr_list
-  - md_in_html
   - def_list
-  - tables
-
-nav:
-  - "Home": index.md
-  - "About": about.md
-  - "Surveys": 
-      - surveys/
 
 extra:
   social:
     - icon: material/github
       link: https://github.com/Project-MORI/MORI-fieldsurvey-report
 
-  copyright:
-    text: © 2025 Project MORI (JICA–IBAMA). All rights reserved.
+  copyright: 
+    © 2025 Project MORI (JICA–IBAMA). All rights reserved.

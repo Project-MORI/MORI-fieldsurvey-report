@@ -46,7 +46,7 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
       return r.json();
     })
     .then((data) => {
-      const filtered = filterBySurveyId(data, TARGET_SURVEY_ID);
+      const filtered = filterBySurveyId(data, TARGET_TITLE);
 
       const layer = L.geoJSON(filtered, {
         pointToLayer: function (feature, latlng) {
@@ -72,7 +72,7 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
       if (layer.getBounds().isValid()) {
         map.fitBounds(layer.getBounds(), { padding: [20, 20] });
       } else {
-        console.warn("No points found for survey_id:", TARGET_SURVEY_ID);
+        console.warn("No points found for survey_id:", TARGET_TITLE);
       }
     })
     .catch((e) => console.error(e));

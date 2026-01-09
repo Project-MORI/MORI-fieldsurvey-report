@@ -40,7 +40,7 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
 
 <script>
   // トップページ（index.md）から見た相対パス（あなたの配置どおり）
-  const geojsonUrl = "./assets/mori_survey_github.geojson";
+  const geojsonUrl = "./assets/MORI_survey_github.geojson";
   const linksUrl  = "./assets/survey_links.json";
 
   // マップ初期化（Amazon全体をざっくり表示）

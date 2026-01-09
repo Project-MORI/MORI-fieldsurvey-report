@@ -37,26 +37,22 @@ title: FieldSurvey_20240205-06_PA
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  // ===== survey_id で GeoJSON をフィルタ =====
   function filterBySurveyId(geojson, surveyId) {
-    if (!geojson || !geojson.features) return geojson;
-
-    const filtered = geojson.features.filter((f) => {
-      const p = f.properties || {};
-      return p.survey_id === surveyId;
+    const feats = (geojson && geojson.features) ? geojson.features : [];
+    const filtered = feats.filter((f) => {
+      const p = (f && f.properties) || {};
+      return (p.title || "") === surveyId;
     });
-
     return { ...geojson, features: filtered };
   }
 
-  // ===== GeoJSON 読み込み =====
   fetch(GEOJSON_URL)
     .then((r) => {
-      if (!r.ok) throw new Error("GeoJSON load failed");
+      if (!r.ok) throw new Error("GeoJSON load failed: " + r.status);
       return r.json();
     })
     .then((data) => {
-      const filtered = filterBySurveyId(data, TARGET_SURVEY_ID);
+      const filtered = filterBySurveyId(data, TARGET_TITLE);
 
       const layer = L.geoJSON(filtered, {
         pointToLayer: function (feature, latlng) {
@@ -68,24 +64,32 @@ title: FieldSurvey_20240205-06_PA
             fillOpacity: 0.9,
           });
         },
-
-        onEachFeature: function (feature, layer) {
+        onEachFeature: (feature, layer) => {
           const p = feature.properties || {};
           let html = "";
-          if (p.survey_id) html += "<b>" + p.survey_id + "</b><br>";
+
+          if (p.title) html += "<b>" + p.title + "</b><br>";
+
+          if (p.survey_id) {
+            const id = String(p.survey_id).trim();
+            const href = "./" + encodeURIComponent(id) + "/"; // ★ md直置き想定のURL
+            html += 'Survey ID: <a href="' + href + '">' + id + "</a><br>";
+          }
+
           if (p.region) html += "Mesh: " + p.region + "<br>";
           if (p.survey_date) html += "Date: " + p.survey_date + "<br>";
-          layer.bindPopup(html);
+
+          if (html) layer.bindPopup(html);
         },
       }).addTo(map);
 
       if (layer.getBounds().isValid()) {
         map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+      } else {
+        console.warn("No points found for survey_id:", TARGET_TITLE);
       }
     })
-    .catch((e) => {
-      console.error(e);
-    });
+    .catch((e) => console.error(e));
 </script>
 ---
 

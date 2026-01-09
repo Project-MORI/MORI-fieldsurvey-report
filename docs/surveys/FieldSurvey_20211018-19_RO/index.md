@@ -4,11 +4,14 @@ title: FieldSurvey_20211018-19_RO
 
 # FieldSurvey_20211018-19_RO
 
-- **Survey Date**: 
-- **Member**: 
+- **Survey Date**: 18/10/2021-19/10/2021
+- **Member**: IBAMA: 3 / Media: 1 / JICA HQs: 1 / JICA BR: 2
 - **Map**: 
+![[FieldSurvey_20211018-19_RO.png]]
 <div id="map"></div>
 
+---
+## point Map
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 

@@ -4,9 +4,13 @@ title: FieldSurvey_20241007-11_RO_AM
 
 # FieldSurvey_20241007-11_RO_AM
 
-- **Survey Date**: 
-- **Member**: 
+- **Survey Date**: 07/10/2024 - 11/10/2024
+- **Member**: IBAMA: 4 / JICA: 2 / JICA BR: 2 / Other: 3
 - **Map**: 
+![[FieldSurvey_20241007-11_RO_AM.png]]
+
+---
+## point Map
 <div id="map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />

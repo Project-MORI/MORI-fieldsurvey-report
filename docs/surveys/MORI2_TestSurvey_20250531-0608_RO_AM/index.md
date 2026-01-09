@@ -4,9 +4,15 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
 
 # MORI2_TestSurvey_20250531-0608_RO_AM
 
-- **Survey Date**: 
-- **Member**: 
+- **Survey Date**: 31/05/2025 - 08/06/2025
+- **Member**: IBAMA: 2 / JICA: 1 / JICA HQs: 3
 - **Map**: 
+![[MORI2_TestSurvey_20250531-0608_AM.png]]
+![[MORI2_TestSurvey_20250531-0608_RO.png]]
+
+---
+
+## point Map
 <div id="map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />

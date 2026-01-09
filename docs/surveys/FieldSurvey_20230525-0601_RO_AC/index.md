@@ -4,9 +4,12 @@ title: FieldSurvey_20230525-0601_RO_AC
 
 # FieldSurvey_20230525-0601_RO_AC
 
-- **Survey Date**: 
-- **Member**: 
+- **Survey Date**: 25/05/2023 - 01/06/2023
+- **Member**: IBAMA: 4 / JICA: 2 / JAXA: 2
 - **Map**: 
+![[FieldSurvey_20230525-0601_RO_AC.png]]
+---
+## point Map
 <div id="map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />

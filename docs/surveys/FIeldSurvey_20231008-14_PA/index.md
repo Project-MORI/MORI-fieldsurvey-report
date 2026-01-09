@@ -4,9 +4,13 @@ title: FIeldSurvey_20231008-14_PA
 
 # FIeldSurvey_20231008-14_PA
 
-- **Survey Date**: 
-- **Member**: 
+- **Survey Date**: 08/10/2023 - 14/10/2023
+- **Member**: IBAMA: 3 / JICA: 2
 - **Map**: 
+![[FIeldSurvey_20231008-14_PA.png]]
+
+---
+## point Map
 <div id="map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />

@@ -4,9 +4,13 @@ title: FieldSurvey_20220919-23_RO
 
 # FieldSurvey_20220919-23_RO
 
-- **Survey Date**: 
-- **Member**: 
+- **Survey Date**: 19/09/2022 - 23/09/2022
+- **Member**: IBAMA: 3 / JICA: 3 / JAXA: 3 / AIST: 3
 - **Map**: 
+![[FieldSurvey_20220919-23_RO.png]]
+
+---
+## point Map
 <div id="map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />

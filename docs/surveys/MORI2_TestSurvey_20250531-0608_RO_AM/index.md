@@ -18,7 +18,7 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
 
 <script>
   // ===== このページ専用設定 =====
-  const TARGET_SURVEY_ID = "MORI2_TestSurvey_20250531-0608_RO_AM";
+  const TARGET_TITLE = "MORI2_TestSurvey_20250531-0608_RO_AM";
 
   // ★ 共通 assets から GeoJSON を読む（surveys/<name>/ から 2階層上）
   const GEOJSON_URL = "../../assets/MORI_survey_github.geojson";
@@ -35,7 +35,7 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
     const feats = (geojson && geojson.features) ? geojson.features : [];
     const filtered = feats.filter((f) => {
       const p = (f && f.properties) || {};
-      return p.survey_id === surveyId;
+      return (p.title || "") === surveyId;
     });
     return { ...geojson, features: filtered };
   }

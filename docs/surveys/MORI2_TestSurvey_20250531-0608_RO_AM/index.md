@@ -24,7 +24,8 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
   const TARGET_SURVEY_ID = "MORI2_TestSurvey_20250531-0608_RO_AM";
 
   // トップと同じ GeoJSON を使う
-  const GEOJSON_URL = "../../assets/MORI_survey_github.geojson";
+  const GEOJSON_URL  = "./assets/survey_links.json";
+
 
   // ===== 地図初期化 =====
   const map = L.map("map").setView([-9.0, -63.0], 6);

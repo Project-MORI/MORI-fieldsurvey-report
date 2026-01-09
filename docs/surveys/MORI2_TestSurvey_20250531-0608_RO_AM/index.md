@@ -58,15 +58,23 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
             fillOpacity: 0.9,
           });
         },
-        onEachFeature: function (feature, layer) {
-          const p = feature.properties || {};
-          let html = "";
-          if (p.title) html += "<b>" + p.title + "</b><br>";
-          if (p.region) html += "Mesh: " + p.region + "<br>";
-          if (p.survey_date) html += "Date: " + p.survey_date + "<br>";
-          if (p.survey_id) html += "Survey: " + p.survey_id + "<br>";
-          layer.bindPopup(html);
+        onEachFeature: (feature, layer) => {
+        const p = feature.properties || {};
+        let html = "";
+
+        if (p.title) html += "<b>" + p.title + "</b><br>";
+
+        if (p.survey_id) {
+          const id = String(p.survey_id).trim();
+          const href = "./" + encodeURIComponent(id) + "/"; // ★ md直置き想定のURL
+          html += 'Survey ID: <a href="' + href + '">' + id + "</a><br>";
         },
+
+  if (p.region) html += "Mesh: " + p.region + "<br>";
+  if (p.survey_date) html += "Date: " + p.survey_date + "<br>";
+
+  if (html) layer.bindPopup(html);
+}
       }).addTo(map);
 
       if (layer.getBounds().isValid()) {

@@ -55,3 +55,8 @@ jobs:
         run: |
           set -euxo pipefail
           mkdocs gh-deploy --force --clean -v
+      # - name: Deploy
+      #   run: |
+      #     set -euxo pipefail
+      #     mkdocs gh-deploy --force -v
+

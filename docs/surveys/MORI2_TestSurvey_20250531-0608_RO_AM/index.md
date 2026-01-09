@@ -13,19 +13,15 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <style>
-  #map {
-    height: 450px;
-    margin: 1rem 0;
-  }
+  #map { height: 450px; margin: 1rem 0; }
 </style>
 
 <script>
   // ===== このページ専用設定 =====
   const TARGET_SURVEY_ID = "MORI2_TestSurvey_20250531-0608_RO_AM";
 
-  // トップと同じ GeoJSON を使う
-  const GEOJSON_URL  = "./assets/survey_links.json";
-
+  // ★ 共通 assets から GeoJSON を読む（surveys/<name>/ から 2階層上）
+  const GEOJSON_URL = "../../assets/mori_survey_github.geojson";
 
   // ===== 地図初期化 =====
   const map = L.map("map").setView([-9.0, -63.0], 6);
@@ -35,22 +31,18 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  // ===== survey_id で GeoJSON をフィルタ =====
   function filterBySurveyId(geojson, surveyId) {
-    if (!geojson || !geojson.features) return geojson;
-
-    const filtered = geojson.features.filter((f) => {
-      const p = f.properties || {};
+    const feats = (geojson && geojson.features) ? geojson.features : [];
+    const filtered = feats.filter((f) => {
+      const p = (f && f.properties) || {};
       return p.survey_id === surveyId;
     });
-
     return { ...geojson, features: filtered };
   }
 
-  // ===== GeoJSON 読み込み =====
   fetch(GEOJSON_URL)
     .then((r) => {
-      if (!r.ok) throw new Error("GeoJSON load failed");
+      if (!r.ok) throw new Error("GeoJSON load failed: " + r.status);
       return r.json();
     })
     .then((data) => {
@@ -66,24 +58,24 @@ title: MORI2_TestSurvey_20250531-0608_RO_AM
             fillOpacity: 0.9,
           });
         },
-
         onEachFeature: function (feature, layer) {
           const p = feature.properties || {};
           let html = "";
-          if (p.survey_id) html += "<b>" + p.survey_id + "</b><br>";
+          if (p.title) html += "<b>" + p.title + "</b><br>";
           if (p.region) html += "Mesh: " + p.region + "<br>";
           if (p.survey_date) html += "Date: " + p.survey_date + "<br>";
+          if (p.survey_id) html += "Survey: " + p.survey_id + "<br>";
           layer.bindPopup(html);
         },
       }).addTo(map);
 
       if (layer.getBounds().isValid()) {
         map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+      } else {
+        console.warn("No points found for survey_id:", TARGET_SURVEY_ID);
       }
     })
-    .catch((e) => {
-      console.error(e);
-    });
+    .catch((e) => console.error(e));
 </script>
 ---
 

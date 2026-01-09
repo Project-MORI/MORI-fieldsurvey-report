@@ -6,15 +6,10 @@ This website provides a structured, map-linked collection of field observations 
 Each survey entry follows a standardized format, including:
 
 - Survey location (GeoJSON / map integration)
-    
 - Background and objectives
-    
 - Field observations and photographs
-    
 - Satellite imagery and AI-assisted analysis
-    
 - Key findings and insights
-    
 
 The purpose of this archive is to enhance **transparency**, improve **decision-making support for field operations**, and strengthen **information sharing** among government agencies, researchers, and project stakeholders.
 
@@ -27,18 +22,9 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
 <div id="map"></div>
 
 <!-- Leaflet & MarkerCluster CSS -->
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet/dist/leaflet.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
-/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
 
 <style>
   #map {
@@ -53,8 +39,9 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
 <script>
-  // トップページから見た GeoJSON の相対パス
-  const geojsonUrl = "./assets/MORI_survey_github.geojson";
+  // トップページから見た相対パス（あなたの配置どおり）
+  const geojsonUrl = "./assets/mori_survey_github.geojson";
+  const linksUrl  = "./assets/survey_links.json";
 
   // マップ初期化（Amazon全体をざっくり表示）
   const map = L.map("map").setView([-4.5, -62.0], 5);
@@ -79,9 +66,7 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
   ];
 
   function getColorForTitle(title) {
-    if (!title) {
-      return "#3388ff"; // デフォルト色
-    }
+    if (!title) return "#3388ff"; // デフォルト色
     if (!titleColorMap[title]) {
       const idx = Object.keys(titleColorMap).length % colorPalette.length;
       titleColorMap[title] = colorPalette[idx];
@@ -92,10 +77,16 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
   // ---- マーカークラスタグループ ----
   const clusterGroup = L.markerClusterGroup();
 
-  // GeoJSON 読み込み
-  fetch(geojsonUrl)
-    .then((response) => response.json())
-    .then((data) => {
+  // GeoJSON + survey_links を両方読み込む
+  Promise.all([
+    fetch(geojsonUrl).then((r) => r.json()),
+    fetch(linksUrl).then((r) => r.json()),
+  ])
+    .then(([data, links]) => {
+      // survey_links.json 側の辞書
+      const idToUrl = (links && links.id_to_url) || {};
+      const surveyNameToUrl = (links && links.survey_name_to_url) || {};
+
       const geojsonLayer = L.geoJSON(data, {
         // ポイントを title ごとの色付き circleMarker に
         pointToLayer: function (feature, latlng) {
@@ -113,24 +104,44 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
           });
         },
 
-        // ポップアップ（ID をリンクにする・URL未定のため #）
+        // ポップアップ（ID をリンクにする：survey_links.json で解決）
         onEachFeature: function (feature, layer) {
           const p = feature.properties || {};
-          const id = p.survey_id || p.id || "";
+
+          // ここは「点の個別ID」と「調査名ID（フォルダ名）」が混在していてもOKにする
+          const id = p.id || p.survey_id || "";
+          const surveyId = p.survey_id || ""; // フォルダ単位のキーが入っている想定
           const title = p.title || p.name || "";
 
-          // まだ GeoJSON に URL 列がないので暫定的に "#"
-          const url = "#";
+          // URL 解決の優先順位：
+          // 1) 個別IDが id_to_url にある → 詳細ページ
+          // 2) survey_id が survey_name_to_url にある → 調査フォルダトップ
+          // 3) id（=survey_idのこともある）が survey_name_to_url にある → 調査フォルダトップ
+          // 4) fallback "#"
+          const url =
+            (id && idToUrl[id]) ||
+            (surveyId && surveyNameToUrl[surveyId]) ||
+            (id && surveyNameToUrl[id]) ||
+            "#";
 
           let html = "";
           if (title) html += "<b>" + title + "</b><br>";
-          if (id) {
-            html += 'ID: <a href="' + url + '">' + id + "</a><br>";
+
+          if (id && url !== "#") {
+            html +=
+              'ID: <a href="' +
+              url +
+              '" target="_blank" rel="noopener">' +
+              id +
+              "</a><br>";
+          } else if (id) {
+            html += "ID: " + id + "<br>";
           }
 
-          if (html) {
-            layer.bindPopup(html);
-          }
+          // 参考として survey_id も出したい場合（不要なら削除OK）
+          // if (surveyId && surveyId !== id) html += "Survey: " + surveyId + "<br>";
+
+          if (html) layer.bindPopup(html);
         },
       });
 
@@ -146,12 +157,11 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
       }
     })
     .catch((err) => {
-      console.error("Failed to load GeoJSON:", err);
+      console.error("Failed to load GeoJSON or survey_links:", err);
     });
 </script>
 
-
-## 調査名の一覧
+## List of Surveys
 <!-- BEGIN: AUTO_SURVEY_LIST -->
 <ul>
   <li><a href="surveys/FieldSurvey_20211018-19_RO/">FieldSurvey_20211018-19_RO</a></li>

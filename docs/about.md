@@ -5,8 +5,9 @@ This website is part of "Project for improving control of illegal deforestation 
 
 **Project MORI**  
 [https://github.com/Project-MORI](https://github.com/Project-MORI)
+
 **ODA Project Site**
-https://www.jica.go.jp/oda/project/1900371/index.html
+[https://www.jica.go.jp/oda/project/1900371/index.html](https://www.jica.go.jp/oda/project/1900371/index.html)
 
 The project aims to strengthen environmental monitoring and enforcement capacity through the integration of satellite remote sensing using SAR, AI-based deforestation prediction, and field-survey data.
 

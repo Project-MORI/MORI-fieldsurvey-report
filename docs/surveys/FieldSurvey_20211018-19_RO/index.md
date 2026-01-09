@@ -24,7 +24,7 @@ title: FieldSurvey_20211018-19_RO
   const TARGET_SURVEY_ID = "FieldSurvey_20211018-19_RO";
 
   // トップと同じ GeoJSON を使う
-  const GEOJSON_URL = "../../assets/mori_survey_github.geojson";
+  const GEOJSON_URL = "../../assets/MORI_survey_github.geojson";
 
   // ===== 地図初期化 =====
   const map = L.map("map").setView([-9.0, -63.0], 6);

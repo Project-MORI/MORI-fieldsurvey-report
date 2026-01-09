@@ -24,7 +24,7 @@ title: FieldSurvey_20241023-27_PA
 
 <script>
   // ===== このページ専用設定 =====
-  const TARGET_SURVEY_ID = "FieldSurvey_20241023-27_PA";
+  const TARGET_TITLE = "FieldSurvey_20241023-27_PA";
 
   // トップと同じ GeoJSON を使う
   const GEOJSON_URL = "../../assets/MORI_survey_github.geojson";

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/about.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "index"
             }
           }
         ]
@@ -171,8 +171,9 @@
   },
   "active": "348a526ce7538d38",
   "lastOpenFiles": [
-    "docs/index.md",
     "docs/about.md",
+    "docs/assets/MORI_survey_github.geojson",
+    "docs/index.md",
     "README.md",
     "docs/surveys/MORI2_TestSurvey_20250531-0608_RO_AM/EX-RO-2506-EX_A.md",
     "docs/surveys/FieldSurvey_20220214-21_PA/AL-PA-2202-12.md",
@@ -206,11 +207,9 @@
     "docs/surveys/FieldSurvey_20240610-14_PA/AL-PA-2406-03.md",
     "docs/surveys/FieldSurvey_20240610-14_PA/AL-PA-2406-05.md",
     "docs/surveys/FieldSurvey_20240610-14_PA/index.md",
-    "docs/surveys/FieldSurvey_20240610-14_PA/ST-PA-2406-08.md",
     "data/surveys.csv",
     "data/survey.csv",
     "survey.csv",
-    "docs/assets/MORI_survey_github.geojson",
     "docs/surveys/FieldSurvey_20250309-15_RO_AC",
     "docs/surveys/FieldSurvey_20241023-27_PA",
     "docs/surveys/FieldSurvey_20241007-11_RO_AM",

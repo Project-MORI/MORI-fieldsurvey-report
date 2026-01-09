@@ -39,7 +39,7 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
 <script>
-  // トップページから見た相対パス（あなたの配置どおり）
+  // トップページ（index.md）から見た相対パス（あなたの配置どおり）
   const geojsonUrl = "./assets/mori_survey_github.geojson";
   const linksUrl  = "./assets/survey_links.json";
 
@@ -77,13 +77,33 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
   // ---- マーカークラスタグループ ----
   const clusterGroup = L.markerClusterGroup();
 
-  // GeoJSON + survey_links を両方読み込む
-  Promise.all([
-    fetch(geojsonUrl).then((r) => r.json()),
-    fetch(linksUrl).then((r) => r.json()),
-  ])
-    .then(([data, links]) => {
-      // survey_links.json 側の辞書
+  // --- 重要：links が失敗しても data（地図点）は必ず表示する設計 ---
+  function fetchJsonOrThrow(url, label) {
+    return fetch(url).then((r) => {
+      if (!r.ok) throw new Error(label + " fetch failed: " + r.status + " " + r.statusText);
+      return r.json();
+    });
+  }
+
+  function fetchJsonOrEmpty(url, label) {
+    return fetch(url)
+      .then((r) => {
+        if (!r.ok) throw new Error(label + " fetch failed: " + r.status + " " + r.statusText);
+        return r.json();
+      })
+      .catch((e) => {
+        console.warn("[WARN] " + label + " not loaded. Links will be disabled.", e);
+        return {}; // ← 失敗時は空辞書で続行
+      });
+  }
+
+  // 1) GeoJSON は必ず読む（失敗したら地図に何も出せないのでエラー）
+  fetchJsonOrThrow(geojsonUrl, "GeoJSON")
+    .then((data) => {
+      // 2) links は「読めたら使う、読めなくても続行」
+      return fetchJsonOrEmpty(linksUrl, "survey_links.json").then((links) => ({ data, links }));
+    })
+    .then(({ data, links }) => {
       const idToUrl = (links && links.id_to_url) || {};
       const surveyNameToUrl = (links && links.survey_name_to_url) || {};
 
@@ -108,38 +128,35 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
         onEachFeature: function (feature, layer) {
           const p = feature.properties || {};
 
-          // ここは「点の個別ID」と「調査名ID（フォルダ名）」が混在していてもOKにする
-          const id = p.id || p.survey_id || "";
-          const surveyId = p.survey_id || ""; // フォルダ単位のキーが入っている想定
+          // Popupに表示するID（あなたの元コードと互換）
+          const displayId = p.survey_id || p.id || "";
           const title = p.title || p.name || "";
 
-          // URL 解決の優先順位：
-          // 1) 個別IDが id_to_url にある → 詳細ページ
-          // 2) survey_id が survey_name_to_url にある → 調査フォルダトップ
-          // 3) id（=survey_idのこともある）が survey_name_to_url にある → 調査フォルダトップ
-          // 4) fallback "#"
+          // survey_links 側の辞書に合わせて URL を解決
+          // 優先順位：
+          // 1) id_to_url[displayId]（個別詳細ページ）
+          // 2) survey_name_to_url[p.survey_id]（調査フォルダ/ページ）
+          // 3) survey_name_to_url[displayId]（displayId=survey_idのケース救済）
+          // 4) "#"
           const url =
-            (id && idToUrl[id]) ||
-            (surveyId && surveyNameToUrl[surveyId]) ||
-            (id && surveyNameToUrl[id]) ||
+            (displayId && idToUrl[displayId]) ||
+            (p.survey_id && surveyNameToUrl[p.survey_id]) ||
+            (displayId && surveyNameToUrl[displayId]) ||
             "#";
 
           let html = "";
           if (title) html += "<b>" + title + "</b><br>";
 
-          if (id && url !== "#") {
+          if (displayId && url !== "#") {
             html +=
               'ID: <a href="' +
               url +
               '" target="_blank" rel="noopener">' +
-              id +
+              displayId +
               "</a><br>";
-          } else if (id) {
-            html += "ID: " + id + "<br>";
+          } else if (displayId) {
+            html += "ID: " + displayId + "<br>";
           }
-
-          // 参考として survey_id も出したい場合（不要なら削除OK）
-          // if (surveyId && surveyId !== id) html += "Survey: " + surveyId + "<br>";
 
           if (html) layer.bindPopup(html);
         },
@@ -157,7 +174,7 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
       }
     })
     .catch((err) => {
-      console.error("Failed to load GeoJSON or survey_links:", err);
+      console.error("Failed to load GeoJSON:", err);
     });
 </script>
 

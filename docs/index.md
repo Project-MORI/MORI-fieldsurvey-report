@@ -185,7 +185,7 @@ We hope that these efforts contribute to a more sustainable future for the Amazo
   <li><a href="surveys/FieldSurvey_20220214-21_PA/">FieldSurvey_20220214-21_PA</a></li>
   <li><a href="surveys/FieldSurvey_20220919-23_RO/">FieldSurvey_20220919-23_RO</a></li>
   <li><a href="surveys/FieldSurvey_20230525-0601_RO_AC/">FieldSurvey_20230525-0601_RO_AC</a></li>
-  <li><a href="surveys/FIeldSurvey_20231008-14_PA/">FIeldSurvey_20231008-14_PA</a></li>
+  <li><a href="surveys/FieldSurvey_20231008-14_PA/">FieldSurvey_20231008-14_PA</a></li>
   <li><a href="surveys/FieldSurvey_20240205-06_PA/">FieldSurvey_20240205-06_PA</a></li>
   <li><a href="surveys/FieldSurvey_20240318-21_PA/">FieldSurvey_20240318-21_PA</a></li>
   <li><a href="surveys/FieldSurvey_20240610-14_PA/">FieldSurvey_20240610-14_PA</a></li>

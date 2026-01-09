@@ -1,13 +1,13 @@
 ---
-title: FIeldSurvey_20231008-14_PA
+title: FieldSurvey_20231008-14_PA
 ---
 
-# FIeldSurvey_20231008-14_PA
+# FieldSurvey_20231008-14_PA
 
 - **Survey Date**: 08/10/2023 - 14/10/2023
 - **Member**: IBAMA: 3 / JICA: 2
 - **Map**: 
-![[FIeldSurvey_20231008-14_PA.png]]
+![[FieldSurvey_20231008-14_PA.png]]
 
 ---
 ## point Map
